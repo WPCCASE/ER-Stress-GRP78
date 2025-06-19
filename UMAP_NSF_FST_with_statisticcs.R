@@ -37,7 +37,7 @@ features_scaled <- df_scaled %>%
 
 # --- UMAP projection ---
 set.seed(42)
-umap_result <- umap(features_scaled, n_neighbors = 4, min_dist = 0.3)
+umap_result <- umap(features_scaled, n_neighbors = 5, min_dist = 0.3)
 
 cluster_df <- as.data.frame(umap_result)
 colnames(cluster_df) <- c("PC1", "PC2")
